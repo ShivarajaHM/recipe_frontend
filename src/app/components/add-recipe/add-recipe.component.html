@@ -1,0 +1,49 @@
+<!--<p>add-recipe works!</p>-->
+<div class="row justify-content-center">
+    <div class="col-md-4 register-employee">
+      <div class="card-body">
+        <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <label for="inputName">Recipe Id</label>
+            <input class="form-control" type="text" formControlName="RecipeId">
+            <div class="invalid-feedback" *ngIf="submitted && myForm.RecipeId.errors?.required">
+              Recipe Id is required.
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputName">Recipe Name</label>
+            <input class="form-control" type="text" formControlName="RecipeName">
+            <div class="invalid-feedback" *ngIf="submitted && myForm.RecipeName.errors?.required">
+              Recipe Name is required.
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputName">Description</label>
+            <input class="form-control" type="text" formControlName="Description">
+            
+          </div>
+          <div class="form-group">
+            <label for="inputName">Calories</label>
+            <input class="form-control" type="text" formControlName="Calories">
+            
+          </div>
+          <div class="form-group">
+            <label for="inputName">Recipe created date</label>
+            <input class="form-control" type="date" formControlName="Recipecreateddate">
+           
+          </div>
+          <div class="form-group">
+            <label for="inputName">Ingredient Names</label>
+            <input class="form-control" type="text" formControlName="IngredientNames">
+           
+          </div>
+          
+          
+          <div class="form-group">
+            <button class="btn btn-success btn-lg btn-block" type="submit">Add Recipe</button>
+          </div>
+        </form>
+  
+      </div>
+    </div>
+  </div>

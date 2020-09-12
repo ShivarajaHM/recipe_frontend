@@ -1,0 +1,40 @@
+<!-- <p>recipe-list works!</p> -->
+<div class="container">
+    <!-- No data message -->
+  <!-- No data message -->
+  <p *ngIf="Recipe.length == 0" class="no-data text-center">There is no Recipe added yet!</p>
+
+  
+  <table class="table table-bordered">
+    <thead class="table-success">
+      <tr>
+        <th scope="col">Recipe Id</th>
+        <th scope="col">Recipe Name</th>
+        <th scope="col">Description</th>
+        <th scope="col">Calories</th>
+        <th scope="col">Recipe created date</th>
+        <th scope="col">Ingredient Names</th>
+        <th scope="col center">Update</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let recipe of Recipe; let i = index">
+        <th scope="row">{{recipe.RecipeId}}</th>
+        <th scope="row">{{recipe.RecipeName}}</th>
+        <th scope="row">{{recipe.Description}}</th>
+        <th scope="row">{{recipe.Calories}}</th>
+        <th scope="row">{{recipe.Recipecreateddate}}</th>
+        <th scope="row">{{recipe.IngredientNames}}</th>
+        
+        <td class="text-center edit-block">
+          <span class="edit" [routerLink]="['/edit-recipe/', recipe.RecipeId]">
+            <button type="button" class="btn btn-success btn-sm">Edit</button>
+          </span>
+          <span class="delete" (click)="removeEmployee(recipe, i)">
+            <button type="button" class="btn btn-danger btn-sm">Delete</button>
+          </span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

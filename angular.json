@@ -28,8 +28,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
-            ],
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+             ],
             "scripts": []
           },
           "configurations": {
@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "recipe-app"
+    }
+  },
+  "defaultProject": "recipe-app",
+  "cli": {
+    "analytics": "b575ec52-1311-42cd-a521-b21160143634"
+  }
 }
